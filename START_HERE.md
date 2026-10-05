@@ -26,7 +26,8 @@ Those downloads live under the ignored `.cache/` directory.
 
 ## 2. Start the interactive lesson in Codex
 
-Open this repository folder as the project in Codex. Start a task and send:
+Open this repository folder as the project in
+[Codex](https://developers.openai.com/learn/codex). Start a task and send:
 
 > Start Introduction to the Language Model Evaluation Harness. Teach me
 > interactively, one question at a time.

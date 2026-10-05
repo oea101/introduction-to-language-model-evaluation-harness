@@ -7,8 +7,10 @@ The course uses
 [EleutherAI's Language Model Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness),
 usually called `lm_eval`. According to the project's README, the harness powers
 the [Hugging Face Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard),
-has appeared in hundreds of papers, and is used inside organizations including
-NVIDIA, Cohere, BigScience, BigCode, Nous Research, and Mosaic ML.
+has been used in
+[hundreds of papers](https://scholar.google.com/scholar?authuser=2&cites=15052937328817631261%2C4097184744846514103%2C1520777361382155671%2C17476825572045927382%2C18443729326628441434%2C14801318227356878622%2C7890865700763267262%2C12854182577605049984%2C15641002901115500560%2C5104500764547628290&hl=en&oi=bibs),
+and is used inside organizations including NVIDIA, Cohere, BigScience, BigCode,
+Nous Research, and Mosaic ML.
 
 This repository packages a real walkthrough rather than a new application. You
 inspect the harness, predict its behavior, run small evaluations, read the
@@ -22,6 +24,11 @@ working with model development, model selection, evaluation platforms, or
 quality and release decisions. It assumes comfort with product concepts and a
 willingness to read small pieces of YAML, JSON, and Python. It does not assume
 that you build production software.
+
+The practical benefit is better evaluation judgment. You will be able to spot
+when a leaderboard number does not support a product claim, define diagnostic
+metrics for a product behavior, compare models without confounding the test, and
+ask for the evidence needed before a launch or regression decision.
 
 ## What you will learn
 
@@ -76,7 +83,8 @@ cd introduction-to-language-model-evaluation-harness
 ./scripts/setup_course.sh
 ```
 
-Open the cloned folder as a project in Codex and send:
+Open the cloned folder as a project in
+[Codex](https://developers.openai.com/learn/codex) and send:
 
 > Start Introduction to the Language Model Evaluation Harness. Teach me
 > interactively, one question at a time.
