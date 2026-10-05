@@ -13,7 +13,7 @@
   "evaluation": "customer_support_tool_calls_regression",
   "files": {
     "baselines/customer-support-regression-qwen2.5-0.5b-instruct.json": {
-      "sha256": "650f33aab97201103f0bab69416f7b1411ec3bd61503f9dea861fd196414b86a"
+      "sha256": "77c2c8f95a4c4d1bb35075aa088b5c3fffeb46d34ede79f76b89c1eaae70ebc3"
     },
     "configs/customer-support-tool-calls-regression-qwen2.5-0.5b-instruct.yaml": {
       "sha256": "65aa4d34aeb2183ca9a5ee234d81d894d22a336b7361fdbaecd28c6e36d7ec27"

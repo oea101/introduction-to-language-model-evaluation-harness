@@ -21,8 +21,9 @@
     "exact_tool_call": 0.6
   },
   "reference_run": {
-    "source_git_hash": "pending-initial-public-commit",
-    "provenance": "Reproduce after the initial public course commit, then replace this marker.",
+    "source_git_hash": "445ec6d80199527eac2af664791ef58ad89117ac",
+    "verified_on": "2026-10-05",
+    "provenance": "Fresh local inference through scripts/run_milestone_10_regression_gate.sh; generated evidence remains ignored by Git.",
     "valid_json": 1.0,
     "valid_tool_schema": 0.6,
     "correct_tool": 0.8,
