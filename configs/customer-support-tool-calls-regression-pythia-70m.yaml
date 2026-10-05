@@ -1,0 +1,22 @@
+model: hf
+model_args:
+  pretrained: EleutherAI/pythia-70m
+  revision: a39f36b100fe8a5377810d56c3f4789b9c53ac42
+  dtype: float32
+
+tasks:
+  - customer_support_tool_calls_regression
+include_path: custom_tasks
+num_fewshot: 0
+
+device: cpu
+batch_size: 1
+seed:
+  - 0
+  - 1234
+  - 1234
+  - 1234
+
+output_path: results/milestone-09/customer-support-tool-calls-regression
+log_samples: true
+write_out: true

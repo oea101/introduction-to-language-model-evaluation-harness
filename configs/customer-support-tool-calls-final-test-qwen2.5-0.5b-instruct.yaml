@@ -1,0 +1,26 @@
+# Release-only configuration. Do not use this file during prompt or model selection.
+model: hf
+model_args:
+  pretrained: Qwen/Qwen2.5-0.5B-Instruct
+  revision: 7ae557604adf67be50417f59c2c2f167def9a775
+  dtype: float32
+
+tasks:
+  - customer_support_tool_calls_final_test
+include_path: custom_tasks
+num_fewshot: 0
+
+apply_chat_template: true
+fewshot_as_multiturn: false
+
+device: cpu
+batch_size: 1
+seed:
+  - 0
+  - 1234
+  - 1234
+  - 1234
+
+output_path: results/milestone-10/final-test
+log_samples: true
+write_out: true

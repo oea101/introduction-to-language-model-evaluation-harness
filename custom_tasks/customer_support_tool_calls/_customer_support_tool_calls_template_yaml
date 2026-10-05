@@ -1,0 +1,46 @@
+dataset_path: json
+test_split: test
+
+output_type: generate_until
+doc_to_text: |-
+  You are a customer-support routing assistant. Choose exactly one tool call.
+
+  Available tools:
+  - track_order(order_id: string)
+  - cancel_order(order_id: string)
+  - create_replacement(order_id: string, sku: string, quantity: integer)
+  - issue_refund(order_id: string, amount_cents: integer, reason: "damaged_item" or "duplicate_charge")
+  - escalate_to_human(reason: "customer_requested_human" or "suspected_fraud")
+
+  Return only one single-line JSON object with exactly these top-level keys:
+  {"name":"<tool name>","arguments":{}}
+
+  Do not use Markdown or add an explanation.
+
+  Customer message: {{message}}
+  Tool call:
+doc_to_target: expected_call
+process_results: !function utils.process_results
+
+generation_kwargs:
+  do_sample: false
+  max_gen_toks: 128
+  until:
+    - "\n\n"
+
+metric_list:
+  - metric: valid_json
+    aggregation: mean
+    higher_is_better: true
+  - metric: valid_tool_schema
+    aggregation: mean
+    higher_is_better: true
+  - metric: correct_tool
+    aggregation: mean
+    higher_is_better: true
+  - metric: correct_arguments
+    aggregation: mean
+    higher_is_better: true
+  - metric: exact_tool_call
+    aggregation: mean
+    higher_is_better: true

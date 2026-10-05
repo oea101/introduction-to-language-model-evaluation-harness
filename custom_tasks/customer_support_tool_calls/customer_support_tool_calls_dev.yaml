@@ -1,0 +1,8 @@
+include: _customer_support_tool_calls_template_yaml
+task: customer_support_tool_calls_dev
+dataset_kwargs:
+  data_files:
+    test: custom_tasks/customer_support_tool_calls/data/development.jsonl
+metadata:
+  version: 1.0
+  split: development

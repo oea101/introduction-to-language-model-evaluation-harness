@@ -1,0 +1,66 @@
+{
+  "dataset": {
+    "ids": [
+      "reg_track_001",
+      "reg_cancel_001",
+      "reg_replace_001",
+      "reg_refund_001",
+      "reg_escalate_001"
+    ],
+    "path": "custom_tasks/customer_support_tool_calls/data/regression.jsonl",
+    "records": 5
+  },
+  "evaluation": "customer_support_tool_calls_regression",
+  "files": {
+    "baselines/customer-support-regression-qwen2.5-0.5b-instruct.json": {
+      "sha256": "650f33aab97201103f0bab69416f7b1411ec3bd61503f9dea861fd196414b86a"
+    },
+    "configs/customer-support-tool-calls-regression-qwen2.5-0.5b-instruct.yaml": {
+      "sha256": "65aa4d34aeb2183ca9a5ee234d81d894d22a336b7361fdbaecd28c6e36d7ec27"
+    },
+    "custom_tasks/customer_support_tool_calls/_customer_support_tool_calls_template_yaml": {
+      "sha256": "d7c0758ce0729b4fc11fe9c8e6c9215b681a726d1b5c6254139f5f114707d2b1"
+    },
+    "custom_tasks/customer_support_tool_calls/customer_support_tool_calls_regression.yaml": {
+      "sha256": "d799ca9777452777997b6c0979f1ef63e5df6f945217f0462fd48d2c1567a784"
+    },
+    "custom_tasks/customer_support_tool_calls/data/regression.jsonl": {
+      "sha256": "4dcf35e4cd4045617b7e4945c9df6a3777677c1663eb8a90dac0d39cf8a007d5"
+    },
+    "custom_tasks/customer_support_tool_calls/utils.py": {
+      "sha256": "ffb8e3e449d70ee9aa089283953da9f193561556b7340aacf465549a05f9f21d"
+    },
+    "pyproject.toml": {
+      "sha256": "83bc7d3dff70c2fdd3e5f5520b84c8e969ec96fd1a7bd4ad7179a6434ac60c38"
+    },
+    "uv.lock": {
+      "sha256": "cc9ac6db82533dea3bec184ed24f4c2bf2e8021a70b64fef4da07c05bec5da77"
+    }
+  },
+  "model": {
+    "adapter": "hf",
+    "dtype": "float32",
+    "pretrained": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  "policy": {
+    "path": "baselines/customer-support-regression-qwen2.5-0.5b-instruct.json",
+    "usage": "routine_regression"
+  },
+  "protocol": {
+    "apply_chat_template": true,
+    "batch_size": 1,
+    "chat_template_sha": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+    "device": "cpu",
+    "fewshot_as_multiturn": false,
+    "num_fewshot": 0,
+    "seeds": [
+      0,
+      1234,
+      1234,
+      1234
+    ],
+    "task": "customer_support_tool_calls_regression"
+  },
+  "schema_version": 1
+}

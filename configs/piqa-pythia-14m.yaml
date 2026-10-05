@@ -1,0 +1,23 @@
+model: hf
+model_args:
+  pretrained: EleutherAI/pythia-14m
+  revision: cf967c0a9a04383db6f7b1108d86b2962634b4ac
+  dtype: float32
+
+tasks:
+  - course_piqa
+include_path: custom_tasks
+num_fewshot: 0
+
+device: cpu
+batch_size: 1
+limit: 20
+seed:
+  - 0
+  - 1234
+  - 1234
+  - 1234
+
+output_path: results/milestone-06/zero-shot
+log_samples: true
+write_out: true

@@ -1,0 +1,27 @@
+name: Course checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
+        with:
+          version: latest-known
+          enable-cache: true
+
+      - name: Install command-line prerequisites
+        run: sudo apt-get update && sudo apt-get install --yes jq ripgrep
+
+      - name: Set up and validate course
+        run: ./scripts/setup_course.sh

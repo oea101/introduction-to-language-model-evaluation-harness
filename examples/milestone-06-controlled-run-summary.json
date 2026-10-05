@@ -1,0 +1,17 @@
+{
+  "artifact_type": "course_authored_summary",
+  "task": "course_piqa",
+  "model": "EleutherAI/pythia-14m",
+  "model_revision": "cf967c0a9a04383db6f7b1108d86b2962634b4ac",
+  "num_fewshot": 0,
+  "effective_cases": 20,
+  "choices_per_case": 2,
+  "likelihood_requests": 40,
+  "metrics": {
+    "acc": 0.65,
+    "acc_stderr": 0.1094,
+    "acc_norm": 0.65,
+    "acc_norm_stderr": 0.1094
+  },
+  "note": "Small teaching run; do not interpret as full-split or production performance."
+}

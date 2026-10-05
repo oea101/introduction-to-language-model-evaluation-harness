@@ -1,0 +1,71 @@
+{
+  "dataset": {
+    "ids": [
+      "final_track_001",
+      "final_track_002",
+      "final_cancel_001",
+      "final_cancel_002",
+      "final_replace_001",
+      "final_replace_002",
+      "final_refund_001",
+      "final_refund_002",
+      "final_escalate_001",
+      "final_escalate_002"
+    ],
+    "path": "custom_tasks/customer_support_tool_calls/data/final_test.jsonl",
+    "records": 10
+  },
+  "evaluation": "customer_support_tool_calls_final_test",
+  "files": {
+    "configs/customer-support-tool-calls-final-test-qwen2.5-0.5b-instruct.yaml": {
+      "sha256": "f38b60f615f01128c2d4e7f57c234d88d60089eb4e064c3e05a87f68b98316ea"
+    },
+    "custom_tasks/customer_support_tool_calls/_customer_support_tool_calls_template_yaml": {
+      "sha256": "d7c0758ce0729b4fc11fe9c8e6c9215b681a726d1b5c6254139f5f114707d2b1"
+    },
+    "custom_tasks/customer_support_tool_calls/customer_support_tool_calls_final_test.yaml": {
+      "sha256": "2006f05e232e28d274c3e35e1055ea583a67cfc765f39d43d4b11f6d674b5270"
+    },
+    "custom_tasks/customer_support_tool_calls/data/final_test.jsonl": {
+      "sha256": "4643459f85756e0382fc68251f5dee5c3e6ae12c0b900b171ba77f86b83c78b2"
+    },
+    "custom_tasks/customer_support_tool_calls/utils.py": {
+      "sha256": "ffb8e3e449d70ee9aa089283953da9f193561556b7340aacf465549a05f9f21d"
+    },
+    "policies/customer-support-final-release.json": {
+      "sha256": "72d56945af6255821afd7a1830578494620df634a9c07f449c4345b9c91e834f"
+    },
+    "pyproject.toml": {
+      "sha256": "83bc7d3dff70c2fdd3e5f5520b84c8e969ec96fd1a7bd4ad7179a6434ac60c38"
+    },
+    "uv.lock": {
+      "sha256": "cc9ac6db82533dea3bec184ed24f4c2bf2e8021a70b64fef4da07c05bec5da77"
+    }
+  },
+  "model": {
+    "adapter": "hf",
+    "dtype": "float32",
+    "pretrained": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  "policy": {
+    "path": "policies/customer-support-final-release.json",
+    "usage": "release_only"
+  },
+  "protocol": {
+    "apply_chat_template": true,
+    "batch_size": 1,
+    "chat_template_sha": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+    "device": "cpu",
+    "fewshot_as_multiturn": false,
+    "num_fewshot": 0,
+    "seeds": [
+      0,
+      1234,
+      1234,
+      1234
+    ],
+    "task": "customer_support_tool_calls_final_test"
+  },
+  "schema_version": 1
+}

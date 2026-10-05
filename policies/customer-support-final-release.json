@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "evaluation": "customer_support_tool_calls_final_test",
+  "decision_rule": "all_metrics_gte_minimum",
+  "effective_samples": 10,
+  "minimum_metrics": {
+    "valid_json": 1.0,
+    "valid_tool_schema": 0.6,
+    "correct_tool": 0.8,
+    "correct_arguments": 0.6,
+    "exact_tool_call": 0.6
+  },
+  "rationale": "Tutorial release floor set before the first final-holdout run; it requires the selected candidate to preserve the approved regression-level behavior on a broader balanced set."
+}

@@ -1,0 +1,27 @@
+model: hf
+model_args:
+  pretrained: Qwen/Qwen2.5-0.5B-Instruct
+  revision: 7ae557604adf67be50417f59c2c2f167def9a775
+  dtype: float32
+
+tasks:
+  - customer_support_tool_calls_regression
+include_path: custom_tasks
+num_fewshot: 0
+
+# Qwen2.5-Instruct was trained with chat formatting. The task prompt remains the
+# same and becomes one user message; the tokenizer adds the assistant prefix.
+apply_chat_template: true
+fewshot_as_multiturn: false
+
+device: cpu
+batch_size: 1
+seed:
+  - 0
+  - 1234
+  - 1234
+  - 1234
+
+output_path: results/milestone-09/model-comparison/qwen2.5-0.5b-instruct-regression
+log_samples: true
+write_out: true

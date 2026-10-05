@@ -1,0 +1,15 @@
+[project]
+name = "introduction-to-language-model-evaluation-harness"
+version = "0.1.0"
+description = "A hands-on Language Model Evaluation Harness course for AI Product Managers"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12,<3.13"
+dependencies = ["lm_eval[hf]==0.4.13"]
+
+[project.urls]
+Repository = "https://github.com/oea101/introduction-to-language-model-evaluation-harness"
+Course = "https://github.com/oea101/introduction-to-language-model-evaluation-harness/blob/main/START_HERE.md"
+
+[tool.uv]
+package = false

@@ -1,0 +1,37 @@
+name: Lesson feedback
+description: Report a confusing explanation, broken checkpoint, or missing PM context.
+title: "[Lesson feedback] "
+labels:
+  - documentation
+body:
+  - type: dropdown
+    id: milestone
+    attributes:
+      label: Milestone
+      options:
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+        - "6"
+        - "7"
+        - "8"
+        - "9"
+        - "10"
+        - Setup or course-wide
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What was unclear or broken?
+      description: Include the question, command, or file you were using.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What would have helped?
+    validations:
+      required: true

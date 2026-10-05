@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "task": {
+    "name": "customer_support_tool_calls_regression",
+    "hash": "c5500605d0ce6a93d741c966cb50b9c7145f05f8b3beaf362d271947067f63a3",
+    "effective_samples": 5
+  },
+  "model": {
+    "pretrained": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  "environment": {
+    "lm_eval_version": "0.4.13",
+    "transformers_version": "5.17.0"
+  },
+  "minimum_metrics": {
+    "valid_json": 1.0,
+    "valid_tool_schema": 0.6,
+    "correct_tool": 0.8,
+    "correct_arguments": 0.6,
+    "exact_tool_call": 0.6
+  },
+  "reference_run": {
+    "source_git_hash": "pending-initial-public-commit",
+    "provenance": "Reproduce after the initial public course commit, then replace this marker.",
+    "valid_json": 1.0,
+    "valid_tool_schema": 0.6,
+    "correct_tool": 0.8,
+    "correct_arguments": 0.6,
+    "exact_tool_call": 0.6
+  }
+}
