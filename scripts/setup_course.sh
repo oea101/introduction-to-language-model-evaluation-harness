@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+export HF_HUB_DISABLE_XET=${HF_HUB_DISABLE_XET:-1}
+export HF_HUB_DOWNLOAD_TIMEOUT=${HF_HUB_DOWNLOAD_TIMEOUT:-300}
+
 PROJECT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 UPSTREAM_DIR="$PROJECT_DIR/upstream/lm-evaluation-harness"
 UPSTREAM_URL="https://github.com/EleutherAI/lm-evaluation-harness.git"

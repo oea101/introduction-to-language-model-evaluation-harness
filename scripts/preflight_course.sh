@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+export HF_HUB_DISABLE_XET=${HF_HUB_DISABLE_XET:-1}
+export HF_HUB_DOWNLOAD_TIMEOUT=${HF_HUB_DOWNLOAD_TIMEOUT:-300}
+
 PROJECT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 EXPECTED_UPSTREAM_COMMIT="ddd67220430a2470529f25fd5c05a576ca1057a0"
 

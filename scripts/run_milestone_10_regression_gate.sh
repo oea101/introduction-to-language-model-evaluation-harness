@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+export HF_HUB_DISABLE_XET=${HF_HUB_DISABLE_XET:-1}
+export HF_HUB_DOWNLOAD_TIMEOUT=${HF_HUB_DOWNLOAD_TIMEOUT:-300}
+
 PROJECT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 RESULT_DIR="$PROJECT_DIR/results/milestone-09/model-comparison/qwen2.5-0.5b-instruct-regression/Qwen__Qwen2.5-0.5B-Instruct"
 MARKER=$(mktemp)
