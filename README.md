@@ -1,4 +1,4 @@
-# Introduction to the Language Model Evaluation Harness
+# Introduction to EleutherAI Language Model Evaluation Harness 
 
 A hands-on, conversational course for **AI Product Managers** who want to
 understand what happens beneath a model evaluation score.
